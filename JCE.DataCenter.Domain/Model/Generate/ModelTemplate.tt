@@ -1,0 +1,65 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
+<#@ include file="$(ProjectDir)ModelAuto.ttinclude"  #>
+
+<# var manager = new Manager(Host, GenerationEnvironment, true) { OutputPath = Path.GetDirectoryName(Host.TemplateFile)}; #>
+<#         
+    List<DbTable> tables=DbHelper.GetDbTables(config.ConnectionString,config.DbDatabase);
+ #>
+
+<# 
+    foreach(DbTable table in tables) 
+    {  #>   
+
+     <# 
+        manager.StartBlock(table.TableName+".cs");
+     #>
+//----------<#= table.TableName #>开始----------    
+using System;
+using Zyl.Infrastructure.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
+   
+namespace Zyl.Domain.Model
+{
+    /// <summary>
+    /// <#= table.TableDesc #> 
+    /// </summary>        
+    public partial class <#= table.TableName #>:EntityBase<<#= table.TableName #>,Guid>
+    {            
+        #region Property(属性)
+        <#                                    
+        foreach (DbColumn column in DbHelper.GetDbColumns(config.ConnectionString,config.DbDatabase,table.TableName,table.SchemaName))
+        { 
+        #>
+
+        /// <summary>
+        /// <#= column.Remark #>
+        /// </summary>
+        <#if(column.IsPrimaryKey){#>[Key]<#}#>
+
+        public <#= column.CSharpType #><# if(column.CommonType.IsValueType && column.IsNullable){#>?<#}#> <#= column.ColumnName #> {get;set;}   
+        <# }  #>
+
+        #endregion
+    }    
+}
+//----------<#= table.TableName #>结束----------
+    <# manager.EndBlock(); #>
+
+<# 
+    } #> 
+
+<#
+    manager.Process(true);
+#>

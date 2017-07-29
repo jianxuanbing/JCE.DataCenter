@@ -1,0 +1,50 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
+<#@ include file="$(ProjectDir)ModelAuto.ttinclude"  #>
+
+<# var manager = new Manager(Host, GenerationEnvironment, true) { OutputPath = Path.GetDirectoryName(Host.TemplateFile)}; #>
+<#         
+    List<DbTable> tables=DbHelper.GetDbTables(config.ConnectionString,config.DbDatabase);
+ #>
+
+<# 
+    foreach(DbTable table in tables) 
+    {  #>   
+
+     <# 
+        manager.StartBlock("I"+table.TableName+"Repository.cs");
+     #>
+using System;
+using Zyl.Domain.Model;
+using Zyl.Infrastructure.Domain.Repositories;
+
+namespace Zyl.Domain.Repositories
+{
+    /// <summary>
+    /// <#= table.TableDesc #> 仓储
+    /// </summary>        
+    public partial interface I<#= table.TableName #>Repository:IRepository<<#= table.TableName #>,Guid>
+    {
+       
+    }    
+}
+
+    <# manager.EndBlock(); #>
+
+<# 
+    } #> 
+
+<#
+    manager.Process(true);
+#>

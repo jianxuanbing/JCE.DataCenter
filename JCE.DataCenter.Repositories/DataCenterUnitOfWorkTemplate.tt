@@ -1,0 +1,53 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="DbHelper.ttinclude"  #>
+
+<#         
+    List<DbTable> tables=DbHelper.GetDbTables(config.ConnectionString,config.DbDatabase);
+ #>
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using JCE.DataCenter.Domain.Model;
+using JCE.DataCenter.Domain.Repositories;
+using JCE.DataCenter.Infrastructure.EntityFramework.Uow;
+
+
+namespace JCE.DataCenter.Repositories
+{
+    /// <summary>
+    /// 数据中心 工作单元
+    /// </summary>        
+    public partial class DataCenterUnitOfWork:UnitOfWork,IDataCenterUnitOfWork
+    {    
+        #region 实体集合
+        <# 
+        foreach(DbTable table in tables)
+        {
+        #>
+
+        /// <summary>
+        /// <#= table.TableDesc #>集合
+        /// </summary>
+        public DbSet<<#= table.TableName #>> <#= table.TableName #>Ds { get; set; }
+        <#
+        }
+        #>
+
+        #endregion        
+    }    
+}

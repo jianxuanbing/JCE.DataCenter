@@ -1,0 +1,2712 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JCE.Core</name>
+    </assembly>
+    <members>
+        <member name="T:JCE.Core.Configs.BasicLoggingConfig">
+            <summary>
+            基础日志配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.BasicLoggingConfig.AdapterConfigs">
+            <summary>
+            获取或设置 日志适配器配置信息集合
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.BasicLoggingConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.BasicLoggingConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.BasicLoggingConfig.#ctor(JCE.Core.Configs.ConfigFile.BasicLoggingElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.BasicLoggingConfig"/>类型的实例
+            </summary>
+            <param name="element">基础日志配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.ContextCollection">
+            <summary>
+            数据上下文配置节点集合
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Configs.ConfigFile.ContextCollection.ContextKey">
+            <summary>
+            上下文键
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextCollection.ElementName">
+            <summary>
+            获取在派生的类中重写时用于标识配置文件中此元素集合的名称。
+            </summary>
+            <returns>
+            集合的名称；否则为空字符串。 默认值为空字符串。
+            </returns>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextCollection.CollectionType">
+            <summary>
+            获取 <see cref="T:System.Configuration.ConfigurationElementCollection"/> 的类型。
+            </summary>
+            <returns>
+            此集合的 <see cref="T:System.Configuration.ConfigurationElementCollectionType"/>。
+            </returns>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.ContextCollection.CreateNewElement">
+            <summary>
+            当在派生的类中重写时，创建一个新的 <see cref="T:System.Configuration.ConfigurationElement"/>。
+            </summary>
+            <returns>
+            一个新的 <see cref="T:System.Configuration.ConfigurationElement"/>。
+            </returns>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.ContextCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            在派生类中重写时获取指定配置元素的元素键。
+            </summary>
+            <returns>
+            一个 <see cref="T:System.Object"/>，用作指定 <see cref="T:System.Configuration.ConfigurationElement"/> 的键。
+            </returns>
+            <param name="element">要为其返回键的 <see cref="T:System.Configuration.ConfigurationElement"/>。</param>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.ContextCollection.BaseAdd(System.Configuration.ConfigurationElement)">
+            <summary>
+            在派生类中添加指定元素的元素键
+            </summary>
+            <param name="element">要添加的键 <see cref="T:System.Configuration.ConfigurationElement"/>。</param>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.ContextCollection.BaseAdd(System.Int32,System.Configuration.ConfigurationElement)">
+            <summary>
+            在派生类中添加指定元素的元素键
+            </summary>
+            <param name="index"> 要添加指定 <see cref="T:System.Configuration.ConfigurationElement"/> 的索引位置。</param>
+            <param name="element"> 要相加的 <see cref="T:System.Configuration.ConfigurationElement"/>。</param>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.ContextElement">
+            <summary>
+            数据上下文配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.Name">
+            <summary>
+            获取或设置 节点名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.Enabled">
+            <summary>
+            获取或设置 是否启用数据上下文
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.DataLoggingEnabled">
+            <summary>
+            获取或设置 是否开启数据日志记录
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.ConnectionStringName">
+            <summary>
+            获取或设置 数据库连接串名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.ContextTypeName">
+            <summary>
+            获取或设置 数据上下文类型名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.ContextElement.DbContextInitializer">
+            <summary>
+            获取或设置 数据上下文初始化配置
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.CreateDatabaseInitializerElement">
+            <summary>
+            数据库创建策略配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.CreateDatabaseInitializerElement.InitializerTypeName">
+            <summary>
+            获取或设置 数据库创建策略类型名称
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.DataElement">
+            <summary>
+            数据配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DataElement.Contexts">
+            <summary>
+            数据上下文配置节点集合
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.DbContextInitializerElement">
+            <summary>
+            数据上下文初始化配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DbContextInitializerElement.InitializerTypeName">
+            <summary>
+            获取或设置 初始化配置类型名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DbContextInitializerElement.EntityMapperFiles">
+            <summary>
+            获取或设置 实体映射类所在程序集名称字符串
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DbContextInitializerElement.CreateDatabaseInitializer">
+            <summary>
+            获取或设置 数据库创建策略配置
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.JceFrameworkSection">
+            <summary>
+            Jce框架节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.JceFrameworkSection.Logging">
+            <summary>
+            获取或设置 日志配置
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.BasicLoggingElement">
+            <summary>
+            基础日志配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.BasicLoggingElement.Adapters">
+            <summary>
+            获取或设置 日志适配器配置节点集合
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.DataLoggingElement">
+            <summary>
+            数据日志配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DataLoggingElement.Enabled">
+            <summary>
+            获取或设置 是否允许数据日志输出
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DataLoggingElement.OutLogLevel">
+            <summary>
+            获取或设置 数据日志输出级别
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.DataLoggingElement.AdapterTypeName">
+            <summary>
+            获取或设置 数据日志输出适配器类型名称
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.LoggingAdapterCollection">
+            <summary>
+            日志适配器配置节点集合
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingAdapterCollection.ElementName">
+            <summary>
+            获取在派生的类中重写时用于标识配置文件中此元素集合的名称
+            </summary>
+            <returns>集合的名称；否则为空字符串。默认为空字符串。</returns>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingAdapterCollection.CollectionType">
+            <summary>
+            获取<see cref="T:System.Configuration.ConfigurationElementCollection"/>的类型
+            </summary>
+            <returns>此集合的 <see cref="T:System.Configuration.ConfigurationElementCollectionType"/>。</returns>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.LoggingAdapterCollection.CreateNewElement">
+            <summary>
+            当在派生的类中重写时，创建一个新的<see cref="T:System.Configuration.ConfigurationElement"/>。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Configs.ConfigFile.LoggingAdapterCollection.GetElementKey(System.Configuration.ConfigurationElement)">
+            <summary>
+            在派生类中重写时获取指定配置元素的元素键
+            </summary>
+            <param name="element">要为其返回键的 <see cref="T:System.Configuration.ConfigurationElement"/></param>
+            <returns>一个 <see cref="T:System.Object"/>，用作指定 <see cref="T:System.Configuration.ConfigurationElement"/> 的键</returns>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.LoggingAdapterElement">
+            <summary>
+            日志输出适配器配置节点
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.NameKey">
+            <summary>
+            适配器名称节点
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.EnabledKey">
+            <summary>
+            是否启用节点
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.TypeKey">
+            <summary>
+            适配器类型名称节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.Name">
+            <summary>
+            获取或设置 适配器名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.Enabled">
+            <summary>
+            获取或设置 是否启用
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingAdapterElement.AdapterTypeName">
+            <summary>
+            获取或设置 适配器类型名称
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.LoggingElement">
+            <summary>
+            日志配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingElement.LoggingEntry">
+            <summary>
+            获取或设置 日志输入配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingElement.BasicLogging">
+            <summary>
+            获取或设置 基础日志配置节点
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.ConfigFile.LoggingEntryElement">
+            <summary>
+            日志输入配置节点
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingEntryElement.Enabled">
+            <summary>
+            获取或设置 是否允许日志输入
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.ConfigFile.LoggingEntryElement.EntryLogLevel">
+            <summary>
+            获取或设置 日志输入级别
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.DataConfig">
+            <summary>
+            数据配置信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DataConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DataConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DataConfig.#ctor(JCE.Core.Configs.ConfigFile.DataElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DataConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DataConfig.ContextConfigs">
+            <summary>
+            获取或设置 上下文配置信息集合
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.DataLoggingConfig">
+            <summary>
+            数据日志配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DataLoggingConfig.Enabled">
+            <summary>
+            获取或设置 是否启用数据日志
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DataLoggingConfig.OutLevel">
+            <summary>
+            获取或设置 日志输出级别
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DataLoggingConfig.AdapterType">
+            <summary>
+            获取或设置 适配器类型
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DataLoggingConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DataLoggingConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DataLoggingConfig.#ctor(JCE.Core.Configs.ConfigFile.DataLoggingElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DataLoggingConfig"/>类型的实例
+            </summary>
+            <param name="element">数据日志配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Configs.DbContextConfig">
+            <summary>
+            数据上下文配置
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.Name">
+            <summary>
+            获取或设置 上下文名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.Enabled">
+            <summary>
+            获取或设置 是否可用
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.DataLoggingEnabled">
+            <summary>
+            获取或设置 是否启用数据日志
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.ConnectionStringName">
+            <summary>
+            获取或设置 数据库连接串名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.ContextType">
+            <summary>
+            获取或设置 数据上下文类型
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextConfig.InitializerConfig">
+            <summary>
+            获取或设置 数据上下文初始化配置
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DbContextConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DbContextConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DbContextConfig.#ctor(JCE.Core.Configs.ConfigFile.ContextElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DbContextConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.DbContextInitializerConfig">
+            <summary>
+            数据上下文初始化配置
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DbContextInitializerConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DbContextInitializerConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.DbContextInitializerConfig.#ctor(JCE.Core.Configs.ConfigFile.DbContextInitializerElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.DbContextInitializerConfig"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextInitializerConfig.InitializerType">
+            <summary>
+            获取或设置 数据上下文初始化类型
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextInitializerConfig.EntityMapperAssemblies">
+            <summary>
+            获取或设置 实体映射类型所在程序集集合
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.DbContextInitializerConfig.CreateDatabaseInitializerType">
+            <summary>
+            获取或设置 创建数据库初始化类型
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.IDataConfigReseter">
+            <summary>
+            数据配置信息重置类
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.IDataConfigReseter.Reset(JCE.Core.Configs.DataConfig)">
+            <summary>
+            重置数据配置信息
+            </summary>
+            <param name="config">原始数据配置信息</param>
+            <returns>重置后的数据配置信息</returns>
+        </member>
+        <member name="T:JCE.Core.Configs.ILoggingConfigReseter">
+            <summary>
+            定义日志配置信息重置功能
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.ILoggingConfigReseter.Reset(JCE.Core.Configs.LoggingConfig)">
+            <summary>
+            日志配置信息重置
+            </summary>
+            <param name="config">待重置的日志配置信息</param>
+            <returns>重置后的日志配置信息</returns>
+        </member>
+        <member name="T:JCE.Core.Configs.JceConfig">
+            <summary>
+            Jce配置类
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.JceConfig.Instance">
+            <summary>
+            获取配置类的单一实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.JceConfig.LoggingConfigReseter">
+            <summary>
+            获取或设置 日志配置重置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.JceConfig.DataConfigReseter">
+            <summary>
+            获取或设置 数据配置重置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.JceConfig.LoggingConfig">
+            <summary>
+            获取或设置 日志配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.JceConfig.DataConfig">
+            <summary>
+            获取或设置 数据配置信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.JceConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.JceConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Configs.LoggingAdapterConfig">
+            <summary>
+            日志适配器配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingAdapterConfig.Name">
+            <summary>
+            获取或设置 适配器名称
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingAdapterConfig.Enabled">
+            <summary>
+            获取或设置 是否启用适配器
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingAdapterConfig.AdapterType">
+            <summary>
+            获取或设置 适配器类型
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingAdapterConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingAdapterConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingAdapterConfig.#ctor(JCE.Core.Configs.ConfigFile.LoggingAdapterElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingAdapterConfig"/>类型的实例
+            </summary>
+            <param name="element">适配器配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Configs.LoggingConfig">
+            <summary>
+            日志配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingConfig.EntryConfig">
+            <summary>
+            获取或设置 日志入口配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingConfig.DataLoggingConfig">
+            <summary>
+            获取或设置 数据日志配置信息
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingConfig.BasicLoggingConfig">
+            <summary>
+            获取或设置 基本日志配置信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingConfig.#ctor(JCE.Core.Configs.ConfigFile.LoggingElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingConfig"/>类型的实例
+            </summary>
+            <param name="element">日志配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Configs.LoggingEntryConfig">
+            <summary>
+            日志记录入口配置
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingEntryConfig.Enabled">
+            <summary>
+            获取或设置 从入口控制是否允许记录日志
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Configs.LoggingEntryConfig.EntryLogLevel">
+            <summary>
+            获取或设置 入口允许记录的日志等级
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingEntryConfig.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingEntryConfig"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Configs.LoggingEntryConfig.#ctor(JCE.Core.Configs.ConfigFile.LoggingEntryElement)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Configs.LoggingEntryConfig"/>类型的实例
+            </summary>
+            <param name="element">日志输入配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Dependency.ActivatorUtilities">
+            <summary>
+            创建实例辅助操作
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.IDependency">
+            <summary>
+            依赖注入接口，表示该接口的实现类将自动注册到IOC容器中
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.IIocBuilder">
+            <summary>
+            定义依赖注入构建器，解析依赖注入服务映射信息进行构建
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.IIocBuilder.ServiceProvider">
+            <summary>
+            获取服务提供者
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IIocBuilder.Build">
+            <summary>
+            开始构建依赖注入映射
+            </summary>
+            <returns>服务提供者</returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.IIocResolver">
+            <summary>
+            依赖注入对象解析获取器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IIocResolver.Resolve``1">
+            <summary>
+            获取指定类型的实例
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.IIocResolver.Resolve(System.Type)">
+            <summary>
+            获取指定类型的实例
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.IIocResolver.Resolves``1">
+            <summary>
+            获取指定类型的所有实例
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.IIocResolver.Resolves(System.Type)">
+            <summary>
+            获取指定类型的所有实例
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.IocBuilderBase">
+            <summary>
+            依赖注入构建器基类，从程序集中反射进行依赖注入接口与实现的注册
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Dependency.IocBuilderBase._services">
+            <summary>
+            服务映射集合
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Dependency.IocBuilderBase._isBuilded">
+            <summary>
+            是否已构建
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocBuilderBase.#ctor(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.IocBuilderBase"/>类型的实例
+            </summary>
+            <param name="services">服务信息集合</param>
+        </member>
+        <member name="P:JCE.Core.Dependency.IocBuilderBase.AssemblyFinder">
+            <summary>
+            获取或设置 程序集查找器
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.IocBuilderBase.ServiceProvider">
+            <summary>
+            获取 服务提供者
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocBuilderBase.Build">
+            <summary>
+            开始构建依赖注入映射
+            </summary>
+            <returns>服务提供者</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocBuilderBase.AddCustomTypes(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            添加自定义服务映射
+            </summary>
+            <param name="services">服务信息集合</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocBuilderBase.BuildAndSetResolver(JCE.Core.Dependency.IServiceCollection,System.Reflection.Assembly[])">
+            <summary>
+            重写以实现构建服务并设置各个平台的Resolver
+            </summary>
+            <param name="services">服务映射信息集合</param>
+            <param name="assemblies">要检索的程序集集合</param>
+            <returns>服务信息集合</returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.IocServiceProvider">
+            <summary>
+            默认IOC服务提供者实现
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocServiceProvider.#ctor(JCE.Core.Dependency.IIocResolver)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.IocServiceProvider"/>类型的新实例
+            </summary>
+            <param name="resolver">依赖注入对象解析获取器</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.IocServiceProvider.GetService(System.Type)">
+            <summary>
+            获取指定类型的服务对象
+            </summary>
+            <param name="serviceType">一个对象，它指定要获取的服务对象的类型</param>
+            <filterproiority>2</filterproiority>
+            <returns>
+            <paramref name="serviceType"/>类型的服务对象，- 或 - 如果没有<paramref name="serviceType"/>类型的服务对象，则为null
+            </returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.IScopeDependency">
+            <summary>
+            依赖注入——局部模式，实现此接口的类型将被注册为<see cref="F:JCE.Core.Dependency.LifetimeStyle.Scoped"/>模式
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.IServiceCollection">
+            <summary>
+            定义服务映射信息集合，用于装载类型映射的描述信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IServiceCollection.Clone">
+            <summary>
+            克隆创建当前集合的副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.IServicesBuilder">
+            <summary>
+            定义服务器映射集合创建功能
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.IServicesBuilder.Build">
+            <summary>
+            构建当前服务，并添加到服务映射集合中
+            </summary>
+            <returns>服务映射集合</returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ISingletonDependency">
+            <summary>
+            依赖注入——单例模式，实现此接口的类型将被注册为<see cref="F:JCE.Core.Dependency.LifetimeStyle.Singleton"/>模式
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.ITransientDependency">
+            <summary>
+            依赖注入——实时模式，实现此接口的类型将被注册为<see cref="F:JCE.Core.Dependency.LifetimeStyle.Transient"/>模式
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.LifetimeStyle">
+            <summary>
+            依赖注入的对象生命周期
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Dependency.LifetimeStyle.Transient">
+            <summary>
+            实时模式，每次获取都创建不同对象
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Dependency.LifetimeStyle.Scoped">
+            <summary>
+            局部模式，同一生命周期获得相同对象，不同生命周期获得不同对象（PerRequest）
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Dependency.LifetimeStyle.Singleton">
+            <summary>
+            单例模式，在第一次获取实例时创建，之后都获得相同对象
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.ObjectFactory">
+            <summary>
+            对象创建委托
+            </summary>
+            <param name="provider">服务提供者</param>
+            <param name="args">构造函数的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ScopeDependencyTypeFinder">
+            <summary>
+            <see cref="T:JCE.Core.Dependency.IScopeDependency"/>依赖注入——局部模式接口实现类查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ScopeDependencyTypeFinder.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ScopeDependencyTypeFinder"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ScopeDependencyTypeFinder.AssemblyFinder">
+            <summary>
+            获取或设置 程序集查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ScopeDependencyTypeFinder.Find(System.Func{System.Type,System.Boolean})">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ScopeDependencyTypeFinder.FindAll">
+            <summary>
+            查找所有项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServiceBuildOptions">
+            <summary>
+            服务创建配置信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceBuildOptions.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceBuildOptions"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceBuildOptions.AssemblyFinder">
+            <summary>
+            获取或设置 程序集查找器
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceBuildOptions.TransientTypeFinder">
+            <summary>
+            获取或设置 即时生命周期依赖类型查找器
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceBuildOptions.ScopeTypeFinder">
+            <summary>
+            获取或设置 范围生命周期依赖类型查找器
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceBuildOptions.SingletonTypeFinder">
+            <summary>
+            获取或设置 单例生命周期依赖类型查找器
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServiceCollection">
+            <summary>
+            依赖注入服务映射信息集合
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceCollection"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.GetEnumerator">
+            <summary>
+            获取循环访问集合的枚举数，返回一个循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的枚举数</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            获取循环访问集合的枚举数，返回一个循环访问集合的枚举数
+            </summary>
+            <returns>可用于循环访问集合的枚举数</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Add(JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            添加映射描述信息
+            </summary>
+            <param name="item">映射描述信息</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Clear">
+            <summary>
+            清空映射描述信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Contains(JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            确定映射描述信息是否在集合中
+            </summary>
+            <param name="item">映射描述信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.CopyTo(JCE.Core.Dependency.ServiceDescriptor[],System.Int32)">
+            <summary>
+            将整个集合复制到兼容的一维数组中，从目标数组的指定索引位置开始放置
+            </summary>
+            <param name="array">作为从集合复制的元素的目标位置的一维数组。 数组必须具有从零开始的索引。</param>
+            <param name="arrayIndex">数组中从零开始的索引，从此索引处开始进行复制。</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Remove(JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            移除指定映射描述信息
+            </summary>
+            <param name="item">映射描述信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.IndexOf(JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            获取指定映射描述信息索引
+            </summary>
+            <param name="item">映射描述信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Insert(System.Int32,JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            在指定索引插入映射描述信息
+            </summary>
+            <param name="index">索引</param>
+            <param name="item">映射描述信息</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.RemoveAt(System.Int32)">
+            <summary>
+            移除指定索引的映射描述信息
+            </summary>
+            <param name="index">索引</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollection.Clone">
+            <summary>
+            克隆创建当前集合的副本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceCollection.Count">
+            <summary>
+            集合元素总数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceCollection.IsReadOnly">
+            <summary>
+            是否只读
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceCollection.Item(System.Int32)">
+            <summary>
+            获取或设置 指定索引的元素
+            </summary>
+            <param name="index">索引值</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServiceCollectionExtensions">
+            <summary>
+            服务集合扩展辅助操作
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient``1(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``0})">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddTransient``2(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``1})">
+            <summary>
+            注册即时生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped``1(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``0})">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddScoped``2(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``1})">
+            <summary>
+            注册范围生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton``1(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``0})">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddSingleton``2(JCE.Core.Dependency.IServiceCollection,System.Func{System.IServiceProvider,``1})">
+            <summary>
+            注册单例生命周期类型的映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddInstance``1(JCE.Core.Dependency.IServiceCollection,``0)">
+            <summary>
+            注册单例生命周期的实例映射信息
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="collection">服务映射信息集合</param>
+            <param name="instance">服务实现类型实例</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddInstance(JCE.Core.Dependency.IServiceCollection,System.Type,System.Object)">
+            <summary>
+            注册单例生命周期的实例映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="instance">服务实现类型实例</param>
+            <returns>服务映射信息集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.Add(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type,JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            注册指定生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <param name="lifetime">生命周期类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.Add(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object},JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            注册指定生命周期类型的映射信息
+            </summary>
+            <param name="collection">服务映射信息集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">实例工厂</param>
+            <param name="lifetime">生命周期类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddDescriptor(JCE.Core.Dependency.IServiceCollection,JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            将映射描述直接添加到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="descriptor">服务映射信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.AddDescriptors(JCE.Core.Dependency.IServiceCollection,System.Collections.Generic.IEnumerable{JCE.Core.Dependency.ServiceDescriptor})">
+            <summary>
+            将映射描述直接添加到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="descriptors">多个服务映射信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAdd(JCE.Core.Dependency.IServiceCollection,JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            尝试将映射描述添加到服务映射集合中，存在则替换并后移
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="descriptor">服务映射信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAdd(JCE.Core.Dependency.IServiceCollection,System.Collections.Generic.IEnumerable{JCE.Core.Dependency.ServiceDescriptor})">
+            <summary>
+            尝试将多个映射描述添加到服务映射集合中，存在则替换并后移
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="descriptors">多个服务映射信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddTransient(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            创建即时类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddTransient(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            创建即时类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddTransient(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建即时类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddTransient``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建即时类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddTransient``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建即时类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddScoped(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            创建范围类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddScoped(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            创建范围类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddScoped(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建范围类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddScoped``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建范围类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddScoped``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建范围类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type)">
+            <summary>
+            创建单例类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type,System.Type)">
+            <summary>
+            创建单例类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddSingleton(JCE.Core.Dependency.IServiceCollection,System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建单例类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实现类型实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddSingleton``1(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建单例类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.TryAddSingleton``2(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            创建单例类型的映射并尝试到服务映射集合中
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceCollectionExtensions.Replace(JCE.Core.Dependency.IServiceCollection,JCE.Core.Dependency.ServiceDescriptor)">
+            <summary>
+            替换服务集合中已经存在的映射信息
+            </summary>
+            <param name="collection">服务映射集合</param>
+            <param name="descriptor">映射信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServiceDescriptor">
+            <summary>
+            依赖注入映射描述信息
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.#ctor(System.Type,System.Type,JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceDescriptor"/>类型的新实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <param name="lifetime">生命周期</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.#ctor(System.Type,System.Object)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceDescriptor"/>类型的新实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="instance">服务实例</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.#ctor(System.Type,System.Func{System.IServiceProvider,System.Object},JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceDescriptor"/>类型的新实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实例工厂</param>
+            <param name="lifetime">生命周期</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.#ctor(System.Type,JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServiceDescriptor"/>类型的新实例
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="lifetime">生命周期</param>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceDescriptor.Lifetime">
+            <summary>
+            获取生命周期的描述
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceDescriptor.ServiceType">
+            <summary>
+            获取服务类型
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceDescriptor.ImplementationType">
+            <summary>
+            获取服务实现类型
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceDescriptor.ImplementationInstance">
+            <summary>
+            获取服务实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.ServiceDescriptor.ImplementationFactory">
+            <summary>
+            获取服务实例创建工厂
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Transient``2">
+            <summary>
+            创建即时生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Transient(System.Type,System.Type)">
+            <summary>
+            创建即时生命周期类型的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实例类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Transient``2(System.Func{System.IServiceProvider,``1})">
+            <summary>
+            创建即时生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Transient``1(System.Func{System.IServiceProvider,``0})">
+            <summary>
+            创建即时生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Transient(System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建即时生命周期类型的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Scoped``2">
+            <summary>
+            创建局部生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Scoped(System.Type,System.Type)">
+            <summary>
+            创建局部生命周期类型的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实例类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Scoped``2(System.Func{System.IServiceProvider,``1})">
+            <summary>
+            创建局部生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Scoped``1(System.Func{System.IServiceProvider,``0})">
+            <summary>
+            创建局部生命周期类型的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Scoped(System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建局部生命周期类型的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Singleton``2">
+            <summary>
+            创建单例生命周期实例的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Singleton(System.Type,System.Type)">
+            <summary>
+            创建单例生命周期实例的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="implementationType">服务实例类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Singleton``2(System.Func{System.IServiceProvider,``1})">
+            <summary>
+            创建单例生命周期实例的描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实例类型</typeparam>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Singleton(System.Type,System.Func{System.IServiceProvider,System.Object})">
+            <summary>
+            创建单例生命周期实例描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">实例工厂</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Instance``1(``0)">
+            <summary>
+            创建单例生命周期实例描述
+            </summary>
+            <typeparam name="TServer">服务类型</typeparam>
+            <param name="instance">服务实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Instance(System.Type,System.Object)">
+            <summary>
+            创建单例生命周期实例的描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="instance">服务实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Describe``2(JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            获取服务描述
+            </summary>
+            <typeparam name="TService">服务类型</typeparam>
+            <typeparam name="TImplementation">服务实现类型</typeparam>
+            <param name="lifetime">生命周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Describe(System.Type,System.Type,JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            获取服务描述
+            </summary>
+            <param name="serviceType">描述类型</param>
+            <param name="implementationType">服务实现类型</param>
+            <param name="lifetime">生命周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Describe(System.Type,System.Func{System.IServiceProvider,System.Object},JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            获取服务描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="factory">服务实例工厂</param>
+            <param name="lifetime">生命周期</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.Describe(System.Type,System.Object)">
+            <summary>
+            获取服务描述
+            </summary>
+            <param name="serviceType">服务类型</param>
+            <param name="instance">服务实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceDescriptor.GetImplementationType">
+            <summary>
+            获取实例类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServiceProviderExtensions">
+            <summary>
+            服务提供者扩展辅助操作
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceProviderExtensions.GetService``1(System.IServiceProvider)">
+            <summary>
+            获取指定类型服务的实例
+            </summary>
+            <typeparam name="T">要获取实例的服务类型</typeparam>
+            <param name="provider">服务提供者</param>
+            <returns>指定类型的实例</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceProviderExtensions.GetRequiredService(System.IServiceProvider,System.Type)">
+            <summary>
+            获取指定类型服务的非空实例
+            </summary>
+            <param name="provider">服务提供者</param>
+            <param name="serviceType">要获取实例的服务类型</param>
+            <returns>指定类型的非空实例</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceProviderExtensions.GetRequiredService``1(System.IServiceProvider)">
+            <summary>
+            获取指定类型服务的非空实例
+            </summary>
+            <typeparam name="T">要获取实例的服务类型</typeparam>
+            <param name="provider">服务提供者</param>
+            <returns>指定类型的非空实例</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceProviderExtensions.GetServices``1(System.IServiceProvider)">
+            <summary>
+            获取指定类型服务的所有实例
+            </summary>
+            <typeparam name="T">要获取实例的服务类型</typeparam>
+            <param name="provider">服务提供者</param>
+            <returns>指定类型的所有实例</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServiceProviderExtensions.GetServices(System.IServiceProvider,System.Type)">
+            <summary>
+            获取指定类型服务的所有实例
+            </summary>
+            <param name="provider">服务提供者</param>
+            <param name="serviceType">要获取实例的服务类型</param>
+            <returns>指定类型的所有实例</returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.ServicesBuilder">
+            <summary>
+            服务器映射集合创建功能
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServicesBuilder"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.#ctor(JCE.Core.Dependency.ServiceBuildOptions)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.ServicesBuilder"/>类型的新实例
+            </summary>
+            <param name="options">服务创建配置信息</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.Build">
+            <summary>
+            构建当前服务，并添加到服务映射集合中
+            </summary>
+            <returns>服务映射集合</returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.AddTypeWithInterfaces(JCE.Core.Dependency.IServiceCollection,System.Type[],JCE.Core.Dependency.LifetimeStyle)">
+            <summary>
+            以类型实现的接口进行服务添加，需排除
+            <see cref="T:JCE.Core.Dependency.ITransientDependency"/>、
+            <see cref="T:JCE.Core.Dependency.IScopeDependency"/>、
+            <see cref="T:JCE.Core.Dependency.ISingletonDependency"/>、
+            <see cref="T:JCE.Core.Dependency.IDependency"/>、
+            <see cref="T:System.IDisposable"/>等非业务接口，如无接口则注册自身
+            </summary>
+            <param name="services">服务映射信息集合</param>
+            <param name="implementationTypes">要注册的实现类型集合</param>
+            <param name="lifetime">注册的生命周期类型</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.AddGlobalTypes(JCE.Core.Dependency.IServiceCollection)">
+            <summary>
+            重写以实现添加全局特殊类型映射
+            </summary>
+            <param name="services">服务映射信息集合</param>
+        </member>
+        <member name="M:JCE.Core.Dependency.ServicesBuilder.GetImplementedInterfaces(System.Type)">
+            <summary>
+            获取指定接口的所有实现类型
+            </summary>
+            <param name="type">类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.SingletonDependencyTypeFinder">
+            <summary>
+            <see cref="T:JCE.Core.Dependency.ISingletonDependency"/>依赖注入——单例模式接口实现类查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.SingletonDependencyTypeFinder.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.SingletonDependencyTypeFinder"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.SingletonDependencyTypeFinder.AssemblyFinder">
+            <summary>
+            获取或设置 程序集查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.SingletonDependencyTypeFinder.Find(System.Func{System.Type,System.Boolean})">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.SingletonDependencyTypeFinder.FindAll">
+            <summary>
+            查找所有项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Dependency.TransientDependencyTypeFinder">
+            <summary>
+            <see cref="T:JCE.Core.Dependency.ITransientDependency"/>依赖注入——即时模式接口实现类查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.TransientDependencyTypeFinder.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Dependency.TransientDependencyTypeFinder"/>类型的新实例
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Dependency.TransientDependencyTypeFinder.AssemblyFinder">
+            <summary>
+            获取或设置 程序集查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Dependency.TransientDependencyTypeFinder.Find(System.Func{System.Type,System.Boolean})">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Dependency.TransientDependencyTypeFinder.FindAll">
+            <summary>
+            查找所有项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.Behavors.ILogicDeleteBehavor">
+            <summary>
+            实体－逻辑删除行为
+            具有逻辑删除的接口，实体需要实现这个接口，将IsDeleted实现
+            在仓储实现类中，delete方法判断实体是否实现了ILogicDeleteBehavor这个接口，然后再决定是否逻辑删除
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Behavors.ILogicDeleteBehavor.IsDeleted">
+            <summary>
+            是否已经删除，默认为false
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.ChangeValue">
+            <summary>
+            变更值
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValue.PropertyName">
+            <summary>
+            属性名
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValue.Desription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValue.OldValue">
+            <summary>
+            旧值
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValue.NewValue">
+            <summary>
+            新值
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValue.IsAttention">
+            <summary>
+            是否关注
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.ChangeValue.#ctor(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.ChangeValue"/>类型的实例
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="description">描述</param>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+            <param name="isAttention">是否关注</param>
+        </member>
+        <member name="M:JCE.Core.Domains.ChangeValue.ToString">
+            <summary>
+            输出变更信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.ChangeValueCollection">
+            <summary>
+            变更值集合
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.ChangeValueCollection.Add(System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            添加
+            </summary>
+            <param name="propertyName">属性名</param>
+            <param name="desription">描述</param>
+            <param name="oldValue">旧值</param>
+            <param name="newValue">新值</param>
+            <param name="isAttention">是否关注</param>
+        </member>
+        <member name="P:JCE.Core.Domains.ChangeValueCollection.IsAttention">
+            <summary>
+            是否关注
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.ChangeValueCollection.GetAttentionValues">
+            <summary>
+            获取关注的变更集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.ChangeValueCollection.ToString">
+            <summary>
+            输出变更信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.DomainBase`1">
+            <summary>
+            领域层顶级基类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="F:JCE.Core.Domains.DomainBase`1._changeValues">
+            <summary>
+            变更值集合
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.DomainBase`1"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.IsNull">
+            <summary>
+            是否空对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.Validate">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.GetChanges(`0)">
+            <summary>
+            获取变更属性
+            </summary>
+            <param name="newEntity">新对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.AddChanges(`0)">
+            <summary>
+            添加变更列表
+            </summary>
+            <param name="newEntity">新对象</param>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.AddChange``1(System.String,System.String,``0,``0,System.Boolean)">
+            <summary>
+            添加变更
+            </summary>
+            <typeparam name="TValue">值类型</typeparam>
+            <param name="propertyName">属性名</param>
+            <param name="description">描述</param>
+            <param name="oldValue">旧值,范例:this.Name</param>
+            <param name="newValue">新值,范例:newEntity.Name</param>
+            <param name="isAttention">是否关注</param>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.AddChange``1(JCE.Core.Domains.ICompareChange{``0},``0)">
+            <summary>
+            添加变更
+            </summary>
+            <typeparam name="TDomainObject">领域对象实体</typeparam>
+            <param name="oldObject">旧对象</param>
+            <param name="newObjet">新对象</param>
+        </member>
+        <member name="M:JCE.Core.Domains.DomainBase`1.AddChange``1(System.Collections.Generic.IEnumerable{JCE.Core.Domains.ICompareChange{``0}},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            添加变更
+            </summary>
+            <typeparam name="TDomainObject">领域对象实体</typeparam>
+            <param name="oldObjects">旧对象列表</param>
+            <param name="newObjects">新对象列表</param>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.EntityBase`2">
+            <summary>
+            领域实体，可持久到数据库的领域模型的基类
+            </summary>    
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TKey">标识类型</typeparam>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.#ctor(`1)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Entities.EntityBase`2"/>类型的实例
+            </summary>
+            <param name="id">标识</param>
+        </member>
+        <member name="P:JCE.Core.Domains.Entities.EntityBase`2.Id">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.Equals(System.Object)">
+            <summary>
+            相等运算
+            </summary>
+            <param name="obj">实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.GetHashCode">
+            <summary>
+            获取哈希
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.op_Equality(JCE.Core.Domains.Entities.EntityBase{`0,`1},JCE.Core.Domains.Entities.EntityBase{`0,`1})">
+            <summary>
+            相等比较
+            </summary>
+            <param name="entity1">领域实体1</param>
+            <param name="entity2">领域实体2</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.op_Inequality(JCE.Core.Domains.Entities.EntityBase{`0,`1},JCE.Core.Domains.Entities.EntityBase{`0,`1})">
+            <summary>
+            不相等比较
+            </summary>
+            <param name="entity1">领域实体1</param>
+            <param name="entity2">领域实体2</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.InitId">
+            <summary>
+            初始化ID
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.EntityBase`2.CreateId">
+            <summary>
+            创建标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IAggregateRoot">
+            <summary>
+            聚合根
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Entities.IAggregateRoot.Version">
+            <summary>
+            版本号（乐观锁）
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IAggregateRoot`1">
+            <summary>
+            聚合根
+            </summary>
+            <typeparam name="TKey">标识类型</typeparam>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IAggregateRoot`2">
+            <summary>
+            聚合根
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TKey">标识类型</typeparam>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IEntity">
+            <summary>
+            实体
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Entities.IEntity.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IEntity`1">
+            <summary>
+            实体
+            </summary>
+            <typeparam name="TKey">标识类型</typeparam>
+        </member>
+        <member name="P:JCE.Core.Domains.Entities.IEntity`1.Id">
+            <summary>
+            标识ID
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Entities.IEntity`2">
+            <summary>
+            实体
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TKey">标识类型</typeparam>
+        </member>
+        <member name="T:JCE.Core.Domains.IDomainObject">
+            <summary>
+            领域对象
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.IDomainObject.Validate">
+            <summary>
+            验证
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.ICompareChange`1">
+            <summary>
+            通过对象比较获取变更属性集
+            </summary>
+            <typeparam name="T">领域对象类型</typeparam>
+        </member>
+        <member name="M:JCE.Core.Domains.ICompareChange`1.GetChanges(`0)">
+            <summary>
+            获取变更属性
+            </summary>
+            <param name="newEntity">新对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.IPager">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IPager.GetPageCount">
+            <summary>
+            获取总页数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IPager.GetSkipCount">
+            <summary>
+            获取跳过的行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IPager.Order">
+            <summary>
+            排序条件
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IPager.GetStartNumber">
+            <summary>
+            获取起始行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IPager.GetEndNumber">
+            <summary>
+            获取结束行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IPager.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.IPagerBase">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IPagerBase.Page">
+            <summary>
+            页数，即从第几页，从1开始
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IPagerBase.PageSize">
+            <summary>
+            每页显示行数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IPagerBase.TotalCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.IQueryBase`1">
+            <summary>
+            查询对象
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IQueryBase`1.GetPrediate">
+            <summary>
+            获取谓词
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IQueryBase`1.GetOrderBy">
+            <summary>
+            获取排序
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.IRepository`2">
+            <summary>
+            仓储，定义仓储模型中的数据标准操作
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+            <typeparam name="TKey">实体标识类型</typeparam>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Add(`0)">
+            <summary>
+            添加实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Add(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            添加实体
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Update(`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Update(`0,`0)">
+            <summary>
+            修改实体
+            </summary>
+            <param name="newEntity">新实体</param>
+            <param name="oldEntity">数据库中旧的实体</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Remove(`1)">
+            <summary>
+            移除实体
+            </summary>
+            <param name="id">实体标识</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Remove(`0)">
+            <summary>
+            移除实体
+            </summary>
+            <param name="entity">实体</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Remove(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            移除实体集合
+            </summary>
+            <param name="ids">实体编号集合</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            移除实体集合
+            </summary>
+            <param name="entities">实体集合</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            移除实体
+            </summary>
+            <param name="predicate">条件</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.FindAll">
+            <summary>
+            查找实体集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Single(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取单个实体
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.FindAsNoTraking">
+            <summary>
+            获取未跟踪的实体集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Find">
+            <summary>
+            查找实体集合
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Find(System.Object[])">
+            <summary>
+            查找实体
+            </summary>
+            <param name="id">实体标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Find(System.Collections.Generic.IEnumerable{`1})">
+            <summary>
+            查找实体列表
+            </summary>
+            <param name="ids">实体标识列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查找实体集合
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.FindList(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            查找实体集合
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Exists(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            判断实体是否存在
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.IRepository`2.Item(`1)">
+            <summary>
+            索引器查找，获取指定标识的实体
+            </summary>
+            <param name="id">实体标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.PagerQuery(JCE.Core.Domains.Repositories.IQueryBase{`0})">
+            <summary>
+            查询
+            </summary>
+            <param name="query">查询对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            获取实体总数
+            </summary>
+            <param name="predicate">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.Clear">
+            <summary>
+            清空实体
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.ClearCache">
+            <summary>
+            清空缓存
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.IRepository`2.GetUnitOfWork">
+            <summary>
+            获取工作单元
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.IRepository`1">
+            <summary>
+            仓储，定义仓储模型中的数据标准操作
+            </summary>
+            <typeparam name="TEntity">实体类型</typeparam>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.Pager">
+            <summary>
+            分页
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.Pager.Page">
+            <summary>
+            页索引，即第几页，从1开始
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.Pager.PageSize">
+            <summary>
+            每页显示行数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.Pager.TotalCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.Pager.Keyword">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.Pager.Order">
+            <summary>
+            排序条件
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.Pager"/>类型的实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.Pager"/>类型的实例
+            </summary>
+            <param name="page">页索引</param>
+            <param name="pageSize">每页显示行数，默认20</param>
+            <param name="order">排序条件</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.#ctor(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.Pager"/>类型的实例
+            </summary>
+            <param name="page">页索引</param>
+            <param name="pageSize">每页显示行数，默认20</param>
+            <param name="totalCount">总行数</param>
+            <param name="order">排序条件</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.GetPageCount">
+            <summary>
+            获取总页数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.GetSkipCount">
+            <summary>
+            获取跳过的行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.GetStartNumber">
+            <summary>
+            获取起始行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.GetEndNumber">
+            <summary>
+            获取结束行数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.Pager.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Repositories.PagerList`1">
+            <summary>
+            分页集合
+            </summary>
+            <typeparam name="T">元素类型</typeparam>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.PagerList`1.Page">
+            <summary>
+            页索引，即第几页，从开始
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.PagerList`1.PageSize">
+            <summary>
+            每页显示行数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.PagerList`1.TotalCount">
+            <summary>
+            总行数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.PagerList`1.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Repositories.PagerList`1.Order">
+            <summary>
+            排序条件
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.PagerList`1.#ctor(JCE.Core.Domains.Repositories.IPager)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.PagerList`1"/>类型的实例
+            </summary>
+            <param name="pager">查询对象</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.PagerList`1.#ctor(System.Int32)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.PagerList`1"/>类型的实例
+            </summary>
+            <param name="totalCount">总行数</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.PagerList`1.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.PagerList`1"/>类型的实例
+            </summary>
+            <param name="page">页索引</param>
+            <param name="pageSize">每页显示行数</param>
+            <param name="totalCount">总行数</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.PagerList`1.#ctor(System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Domains.Repositories.PagerList`1"/>类型的实例
+            </summary>
+            <param name="page">页索引</param>
+            <param name="pageSize">每页显示行数</param>
+            <param name="totalCount">总行数</param>
+            <param name="order">排序条件</param>
+        </member>
+        <member name="M:JCE.Core.Domains.Repositories.PagerList`1.Convert``1(System.Func{`0,``0})">
+            <summary>
+            转换分页集合的元素类型
+            </summary>
+            <typeparam name="TResult">目标元素类型</typeparam>
+            <param name="converter">转换方法</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Domains.StateDescription">
+            <summary>
+            状态描述
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Domains.StateDescription._description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.StateDescription.ToString">
+            <summary>
+            输出对象状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.StateDescription.AddDescriptions">
+            <summary>
+            添加描述
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.StateDescription.AddDescription(System.String)">
+            <summary>
+            添加描述
+            </summary>
+            <param name="description">描述</param>
+        </member>
+        <member name="M:JCE.Core.Domains.StateDescription.AddDescription``1(System.String,``0)">
+            <summary>
+            添加描述
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            <param name="name">键</param>
+            <param name="value">值</param>
+        </member>
+        <member name="T:JCE.Core.Domains.TransactionalBehavior">
+            <summary>
+            在执行数据库命令或查询期间控制事务创建行为。
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Domains.TransactionalBehavior.DoNotEnsureTransaction">
+            <summary>
+            如果存在现有事务，则使用它，否则在没有事务的情况下执行命令或查询。
+            </summary>
+        </member>
+        <member name="F:JCE.Core.Domains.TransactionalBehavior.EnsureTransaction">
+            <summary>
+            如果不存在任何事务，则使用新事务进行操作。
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Domains.Uow.IUnitOfWork">
+            <summary>
+            工作单元
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Domains.Uow.IUnitOfWork.TransactionEnabled">
+            <summary>
+            获取或设置 是否开启事务提交
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Domains.Uow.IUnitOfWork.ExecuteSqlCommand(JCE.Core.Domains.TransactionalBehavior,System.String,System.Object[])">
+             <summary>
+             对数据库执行给定的 DDL/DML 命令。 
+             与接受 SQL 的任何 API 一样，对任何用户输入进行参数化以便避免 SQL 注入攻击是十分重要的。 您可以在 SQL 查询字符串中包含参数占位符，然后将参数值作为附加参数提供。 
+             您提供的任何参数值都将自动转换为 DbParameter。 unitOfWork.ExecuteSqlCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @p0", userSuppliedAuthor); 
+             或者，您还可以构造一个 DbParameter 并将它提供给 SqlQuery。 这允许您在 SQL 查询字符串中使用命名参数。 unitOfWork.ExecuteSqlCommand("UPDATE dbo.Posts SET Rating = 5 WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+             </summary>
+            <param name="transactionalBehavior">对于此命令控制事务的创建。</param>
+             <param name="sql">命令字符串。</param>
+             <param name="parameters">要应用于命令字符串的参数。</param>
+             <returns>执行命令后由数据库返回的结果。</returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Uow.IUnitOfWork.SqlQuery``1(System.String,System.Object[])">
+            <summary>
+            创建一个原始 SQL 查询，该查询将返回给定泛型类型的元素。 类型可以是包含与从查询返回的列名匹配的属性的任何类型，也可以是简单的基元类型。 该类型不必是实体类型。
+             即使返回对象的类型是实体类型，上下文也决不会跟踪此查询的结果。 使用 SqlQuery(String, Object[]) 方法可返回上下文跟踪的实体。 
+            与接受 SQL 的任何 API 一样，对任何用户输入进行参数化以便避免 SQL 注入攻击是十分重要的。 您可以在 SQL 查询字符串中包含参数占位符，然后将参数值作为附加参数提供。 
+            您提供的任何参数值都将自动转换为 DbParameter。 unitOfWork.SqlQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor); 
+            或者，您还可以构造一个 DbParameter 并将它提供给 SqlQuery。 这允许您在 SQL 查询字符串中使用命名参数。 unitOfWork.SqlQuery&lt;Post&gt;("SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+            </summary>
+            <typeparam name="TElement">查询所返回对象的类型。</typeparam>
+            <param name="sql">SQL 查询字符串。</param>
+            <param name="parameters">要应用于 SQL 查询字符串的参数。 如果使用输出参数，则它们的值在完全读取结果之前不可用。 这是由于 DbDataReader 的基础行为而导致的，有关详细信息，请参见 http://go.microsoft.com/fwlink/?LinkID=398589。</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Uow.IUnitOfWork.SqlQuery(System.Type,System.String,System.Object[])">
+            <summary>
+             创建一个原始 SQL 查询，该查询将返回给定类型的元素。 类型可以是包含与从查询返回的列名匹配的属性的任何类型，也可以是简单的基元类型。 该类型不必是实体类型。 即使返回对象的类型是实体类型，上下文也决不会跟踪此查询的结果。 使用 SqlQuery(String, Object[]) 方法可返回上下文跟踪的实体。 与接受 SQL 的任何 API 一样，对任何用户输入进行参数化以便避免 SQL 注入攻击是十分重要的。 您可以在 SQL 查询字符串中包含参数占位符，然后将参数值作为附加参数提供。 您提供的任何参数值都将自动转换为 DbParameter。 context.Database.SqlQuery(typeof(Post), "SELECT * FROM dbo.Posts WHERE Author = @p0", userSuppliedAuthor); 或者，您还可以构造一个 DbParameter 并将它提供给 SqlQuery。 这允许您在 SQL 查询字符串中使用命名参数。 context.Database.SqlQuery(typeof(Post), "SELECT * FROM dbo.Posts WHERE Author = @author", new SqlParameter("@author", userSuppliedAuthor));
+            </summary>
+            <param name="elementType">查询所返回对象的类型。</param>
+            <param name="sql">SQL 查询字符串。</param>
+            <param name="parameters">要应用于 SQL 查询字符串的参数。 如果使用输出参数，则它们的值在完全读取结果之前不可用。 这是由于 DbDataReader 的基础行为而导致的，有关详细信息，请参见 http://go.microsoft.com/fwlink/?LinkID=398589。</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Domains.Uow.IUnitOfWork.SaveChanges">
+            <summary>
+            提交当前单元操作的更改
+            </summary>
+            <returns>操作影响的行数</returns>
+        </member>
+        <member name="T:JCE.Core.Initialize.FrameworkInitializer">
+            <summary>
+            框架初始化
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Initialize.FrameworkInitializer.Initialize(JCE.Core.Dependency.IIocBuilder)">
+            <summary>
+            开始执行框架初始化
+            </summary>
+            <param name="iocBuilder">依赖注入构建器</param>
+        </member>
+        <member name="T:JCE.Core.Initialize.IBasicLoggingInitializer">
+            <summary>
+            定义基础日志初始化器，用于初始化基础日志功能
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Initialize.IBasicLoggingInitializer.Initialize(JCE.Core.Configs.LoggingConfig)">
+            <summary>
+            开始初始化基础日志
+            </summary>
+            <param name="config">日志配置信息</param>
+        </member>
+        <member name="T:JCE.Core.Initialize.IFrameworkInitializer">
+            <summary>
+            框架初始化接口
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Initialize.IFrameworkInitializer.Initialize(JCE.Core.Dependency.IIocBuilder)">
+            <summary>
+            开始执行框架初始化
+            </summary>
+            <param name="iocBuilder">依赖注入构建器</param>
+        </member>
+        <member name="T:JCE.Core.Initialize.LoggingInitializerBase">
+            <summary>
+            日志初始化器基类
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Initialize.LoggingInitializerBase.ServiceProvider">
+            <summary>
+            获取或设置 服务提供者
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Initialize.LoggingInitializerBase.SetLoggingFromAdapterConfig(JCE.Core.Configs.LoggingAdapterConfig)">
+            <summary>
+            从日志适配器配置节点初始化日志适配器
+            </summary>
+            <param name="config">日志适配器配置节点</param>
+        </member>
+        <member name="T:JCE.Core.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Caching_CacheNotInitialized">
+            <summary>
+              查找类似 缓存功能尚未初始化，未找到可用的 ICacheProvider 实现。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.ConfigFile_ItemKeyDefineRepeated">
+            <summary>
+              查找类似 标识为“{0}”的项重复定义 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.ConfigFile_NameToTypeIsNull">
+            <summary>
+              查找类似 名称为“{0}”的类型不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Context_BuildServicesFirst">
+            <summary>
+              查找类似 请先初始化依赖注入服务，再使用OSharpContext.IocRegisterServices属性 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.DbContextInitializerConfig_InitializerNotExists">
+            <summary>
+              查找类似 上下文初始化类型“{0}”不存在 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Ioc_CannotResolveService">
+            <summary>
+              查找类似 无法解析类型“{0}”的构造函数中类型为“{1}”的参数 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Ioc_FrameworkNotInitialized">
+            <summary>
+              查找类似 OSharp框架尚未初始化，请先初始化 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Ioc_ImplementationTypeNotFound">
+            <summary>
+              查找类似 类型“{0}”的实现类型无法找到 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Ioc_NoConstructorMatch">
+            <summary>
+              查找类似 类型“{0}”中找不到合适参数的构造函数 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Ioc_TryAddIndistinguishableTypeToEnumerable">
+            <summary>
+              查找类似 实现类型不能为“{0}”，因为该类型与注册为“{1}”的其他类型无法区分 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.IocInitializerBase_TypeNotIRepositoryType">
+            <summary>
+              查找类似 类型“{0}”不是仓储接口“IRepository&lt;,&gt;”的派生类。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.IocInitializerBase_TypeNotIUnitOfWorkType">
+            <summary>
+              查找类似 类型“{0}”不是操作单元“IUnitOfWork”的派生类。 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.Map_MapperIsNull">
+            <summary>
+              查找类似 MapperExtensions.Mapper不能为空，请先设置值 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:JCE.Core.Properties.Resources.QueryCacheExtensions_TypeNotEntityType">
+            <summary>
+              查找类似 类型“{0}”不是实体类型 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Reflection.DirectoryAssemblyFinder">
+            <summary>
+            目标程序集查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Reflection.DirectoryAssemblyFinder.#ctor">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Reflection.DirectoryAssemblyFinder"/>类型的新实例
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Reflection.DirectoryAssemblyFinder.#ctor(System.String)">
+            <summary>
+            初始化一个<see cref="T:JCE.Core.Reflection.DirectoryAssemblyFinder"/>类型的新实例
+            </summary>
+            <param name="path">bin目录路径</param>
+        </member>
+        <member name="M:JCE.Core.Reflection.DirectoryAssemblyFinder.Find(System.Func{System.Reflection.Assembly,System.Boolean})">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Reflection.DirectoryAssemblyFinder.FindAll">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Reflection.DirectoryAssemblyFinder.GetBinPath">
+            <summary>
+            获取Bin路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Reflection.IAllAssemblyFinder">
+            <summary>
+            定义所有程序集查找器
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Reflection.IAssemblyFinder">
+            <summary>
+            定义程序集查找器
+            </summary>
+        </member>
+        <member name="T:JCE.Core.Reflection.IFinder`1">
+            <summary>
+            定义一个查找器
+            </summary>
+            <typeparam name="TItem">要查找的项类型</typeparam>
+        </member>
+        <member name="M:JCE.Core.Reflection.IFinder`1.Find(System.Func{`0,System.Boolean})">
+            <summary>
+            查找指定条件的项
+            </summary>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Reflection.IFinder`1.FindAll">
+            <summary>
+            查找所有项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Reflection.IMethodInfoFinder">
+            <summary>
+            定义方法信息查找器
+            </summary>
+        </member>
+        <member name="M:JCE.Core.Reflection.IMethodInfoFinder.Find(System.Type,System.Func{System.Reflection.MethodInfo,System.Boolean})">
+            <summary>
+            查找指定条件的方法信息
+            </summary>
+            <param name="type">控制器类型</param>
+            <param name="predicate">筛选条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:JCE.Core.Reflection.IMethodInfoFinder.FindAll(System.Type)">
+            <summary>
+            从指定类型查找方法信息
+            </summary>
+            <param name="type">控制器类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:JCE.Core.Reflection.ITypeFinder">
+            <summary>
+            定义类型查找行为
+            </summary>
+        </member>
+    </members>
+</doc>
