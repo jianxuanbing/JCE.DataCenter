@@ -15,7 +15,7 @@
 
 <# var manager = new Manager(Host, GenerationEnvironment, true) { OutputPath = Path.GetDirectoryName(Host.TemplateFile)}; #>
 <#         
-    List<DbTable> tables=DbHelper.GetDbTables(config.ConnectionString,config.DbDatabase,null);
+    List<DbTable> tables=DbHelper.GetDbTables(config.ConnectionString,config.DbDatabase);
  #>
 
 <# 
@@ -23,38 +23,30 @@
     {  #>   
 
      <# 
-        manager.StartBlock(table.TableName+".cs");
+        manager.StartBlock(""+table.TableName+"Repository.cs");
      #>
-//----------<#= table.TableName #>开始----------    
 using System;
-using JCE.DataCenter.Infrastructure.Domain.Entities;
-using System.ComponentModel.DataAnnotations;
-   
-namespace JCE.DataCenter.Domain.Model
+using JCE.DataCenter.Domain.Model;
+using JCE.DataCenter.Domain.Repositories;
+using JCE.DataCenter.Infrastructure.Domain.Uow;
+
+namespace JCE.DataCenter.Repositories.Impl
 {
     /// <summary>
-    /// <#= table.TableDesc #> 
+    /// <#= table.TableDesc #> 仓储
     /// </summary>        
-    public partial class <#= table.TableName #>:EntityBase<<#= table.TableName #>,Guid>
-    {            
-        #region Property(属性)
-        <#                                    
-        foreach (DbColumn column in DbHelper.GetDbColumns(config.ConnectionString,config.DbDatabase,table.TableName,table.SchemaName))
-        { 
-        #>
-
+    public partial class <#= table.TableName #>Repository:RepositoryBase<<#= table.TableName #>,Guid>,I<#= table.TableName #>Repository
+    {
         /// <summary>
-        /// <#= column.Remark #>
+        /// 初始化一个<see cref="<#= table.TableName #>Repository"/>类型的实例
         /// </summary>
-        <#if(column.IsPrimaryKey){#>[Key]<#}#>
-
-        public <#= column.CSharpType #><# if(column.CommonType.IsValueType && column.IsNullable){#>?<#}#> <#= column.ColumnName #> {get;set;}   
-        <# }  #>
-
-        #endregion
+        /// <param name="unitOfWork">工作单元</param>
+        public <#= table.TableName #>Repository(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+        }
     }    
 }
-//----------<#= table.TableName #>结束----------
+
     <# manager.EndBlock(); #>
 
 <# 

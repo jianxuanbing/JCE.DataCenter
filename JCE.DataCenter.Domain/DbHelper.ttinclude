@@ -1,10 +1,10 @@
-﻿
-<#+ 
+﻿<#+
+
     public class DbHelper
     {
         #region GetDbTables
 
-        public static List<DbTable> GetDbTables(string connectionString, string database, string tables = null)
+        public static List<DbTable> GetDbTables(string connectionString, string database, string tables=null)
         {
 
             if (!string.IsNullOrEmpty(tables))
@@ -50,7 +50,7 @@
 
         #region GetDbColumns
 
-        public static List<DbColumn> GetDbColumns(string connectionString, string database, string tableName, string schema = "dbo")
+        public static List<DbColumn> GetDbColumns(string connectionString, string database, string tableName, string schema="dbo")
         {
             #region SQL
             string sql = string.Format(@"
@@ -354,8 +354,8 @@
 <#+
 	public class config
 	{
-        public static readonly string ConnectionString = "Data Source=114.55.14.48,30002; Initial Catalog=ErpCloudBusiness_wxb; User ID=login;Password=pass2it2017; Connect Timeout=120; MultipleActiveResultSets=True;";
-        public static readonly string DbDatabase = "ErpCloudBusiness_wxb";
+        public static readonly string ConnectionString = "Data Source=JIAN\XUAN; Initial Catalog=DataCenter; User ID=sa;Password=123456; Connect Timeout=120; MultipleActiveResultSets=True;";
+        public static readonly string DbDatabase = "DataCenter";
         public static readonly string TableName = "";
 	}
 #>

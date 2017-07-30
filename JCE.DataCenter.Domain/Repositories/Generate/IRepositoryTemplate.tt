@@ -26,10 +26,10 @@
         manager.StartBlock("I"+table.TableName+"Repository.cs");
      #>
 using System;
-using Zyl.Domain.Model;
-using Zyl.Infrastructure.Domain.Repositories;
+using JCE.DataCenter.Domain.Model;
+using JCE.DataCenter.Infrastructure.Domain.Repositories;
 
-namespace Zyl.Domain.Repositories
+namespace JCE.DataCenter.Domain.Repositories
 {
     /// <summary>
     /// <#= table.TableDesc #> 仓储

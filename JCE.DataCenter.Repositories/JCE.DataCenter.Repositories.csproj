@@ -57,6 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextConfig.cs" />
+    <Compile Include="Impl\Generate\RepositoryTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepositoryTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryBase.cs" />
     <Compile Include="DataCenterUnitOfWork.cs" />
@@ -71,6 +76,10 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DataCenterUnitOfWorkTemplate.cs</LastGenOutput>
     </Content>
+    <Content Include="Impl\Generate\RepositoryTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RepositoryTemplate.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -79,7 +88,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Impl\" />
+    <Folder Include="Impl\Extensions\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\JCE.DataCenter.Domain\JCE.DataCenter.Domain.csproj">
@@ -102,6 +111,9 @@
       <Project>{33da410b-ca72-4e78-897e-ba4e123b45df}</Project>
       <Name>JCE.DataCenter.Logs.Log4Net</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
