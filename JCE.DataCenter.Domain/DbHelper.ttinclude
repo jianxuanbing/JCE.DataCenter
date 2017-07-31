@@ -354,7 +354,7 @@
 <#+
 	public class config
 	{
-        public static readonly string ConnectionString = "Data Source=JIAN\XUAN; Initial Catalog=DataCenter; User ID=sa;Password=123456; Connect Timeout=120; MultipleActiveResultSets=True;";
+        public static readonly string ConnectionString = "Data Source=JIAN\\JIAN; Initial Catalog=DataCenter; User ID=sa;Password=123456; Connect Timeout=120; MultipleActiveResultSets=True;";
         public static readonly string DbDatabase = "DataCenter";
         public static readonly string TableName = "";
 	}
